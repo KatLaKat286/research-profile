@@ -10,6 +10,7 @@ except:
     st.sidebar.warning("Image not found. Check filename!")
 
 st.sidebar.title("Contact Details")
+st.sidebar.success("Available for Research Collaborations")
 st.sidebar.write("👤 **Katlego Masiteng**")
 st.sidebar.write("📧 [kmastung@gmail.com](mailto:kmastung@gmail.com)")
 st.sidebar.write("📞 061 925 2432")
@@ -70,5 +71,6 @@ with tab3:
 
 st.markdown("---")
 st.caption("© 2026 Katlego Masiteng • Built with Streamlit")
+
 
 
