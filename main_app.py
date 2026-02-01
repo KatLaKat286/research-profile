@@ -5,7 +5,12 @@ st.set_page_config(page_title="Katlego Masiteng | Researcher Profile", page_icon
 
 # Sidebar for contact info
 # Ensure "profile_image.png" is in the same folder as this script!
-st.sidebar.image("profile_image.png", width=150)
+try:
+    st.sidebar.image("profile_image.png", width=150)
+except Exception:
+    st.sidebar.warning("Unable to load profile image. Check the filename on GitHub!")
+
+st.sidebar.title("Contact Details")
 st.sidebar.title("Contact Details")
 st.sidebar.write("👤 **Katlego Masiteng**")
 st.sidebar.write("📧 [kmastung@gmail.com](mailto:kmastung@gmail.com)")
@@ -70,4 +75,5 @@ with sk_col3:
     st.write("- Streamlit\n- GitHub\n- Docker")
 
 st.markdown("---")
+
 st.caption("© 2026 Katlego Masiteng • Built with Streamlit")
