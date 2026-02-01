@@ -17,11 +17,20 @@ st.sidebar.write("📍 University of Johannesburg")
 
 # CV Download
 st.sidebar.markdown("---")
+# --- DOWNLOAD CV BUTTON ---
+st.sidebar.markdown("---")
 try:
-    with open("CV.pdf", "rb") as file:
-        st.sidebar.download_button(label="📄 Download CV", data=file, file_name="Katlego_Masiteng_CV.pdf", mime="application/pdf")
-except:
-    st.sidebar.error("CV.pdf missing!")
+    # 1. Update this line to match your actual filename on GitHub
+    with open("Katlego Masiteng_Resume 2026.pdf", "rb") as file:
+        st.sidebar.download_button(
+            label="📄 Download CV",
+            data=file,
+            # 2. This is what the file will be named when someone downloads it
+            file_name="Katlego_Masiteng_Resume.pdf", 
+            mime="application/pdf"
+        )
+except FileNotFoundError:
+    st.sidebar.warning("Ensure 'Katlego Masiteng_Resume 2026.pdf' is uploaded to GitHub.")
 
 # --- MAIN CONTENT ---
 st.title("Researcher Profile: Katlego Masiteng")
@@ -61,4 +70,5 @@ with tab3:
 
 st.markdown("---")
 st.caption("© 2026 Katlego Masiteng • Built with Streamlit")
+
 
