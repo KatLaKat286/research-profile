@@ -5,7 +5,7 @@ st.set_page_config(page_title="Katlego Masiteng | Researcher Profile", page_icon
 
 # Sidebar
 try:
-    st.sidebar.image("profile_image.png", width=150)
+    st.sidebar.image("profile_image.png.png", width=150)
 except:
     st.sidebar.warning("Image not found. Check filename!")
 
@@ -61,3 +61,4 @@ with tab3:
 
 st.markdown("---")
 st.caption("© 2026 Katlego Masiteng • Built with Streamlit")
+
